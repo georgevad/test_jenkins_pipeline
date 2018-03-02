@@ -13,6 +13,9 @@ void parallelize(int count) {
     // …
 }
 pipeline {
+    agent {
+        label 'master'
+    }
     options {
         // timestamps()
         buildDiscarder(logRotator(numToKeepStr: '10'))
