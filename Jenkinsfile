@@ -33,11 +33,11 @@ pipeline {
                 expression { !params.MANUAL_BUILD }
             }
             steps {
-                sh "false"
+                bat "false"
             }
         }
         stage("Preparations") {
-            echo "haaha"
+            bat 'echo test'
         }
     }
 }
