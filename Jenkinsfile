@@ -12,6 +12,7 @@ void parallelize(int count) {
     }
     // …
 }
+parallelize(1)
 pipeline {
     agent {
         label 'master'
@@ -36,7 +37,7 @@ pipeline {
             }
         }
         stage("Preparations") {
-            parallelize(1)
+            echo "haaha"
         }
     }
 }
